@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="username" placeholder="username">
+    <input type="password" name="" id="password" placeholder="password">
+    <button onclick="onLogin()" id="btn" type="submit">kirim</button>
+    <button onclick="onLogout()" id="btnl" type="submit">keluar</button>
+
+
+    <div id="admin" class="container">
+        <h1>Login Admin</h1>
+        <h2>ini adalah dashboard admin</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, vitae aperiam. Quam accusamus ratione officia soluta corporis officiis, veritatis architecto delectus voluptatibus. Eius molestias quaerat odio voluptate optio sit illo.</p>
+    </div>
+
+    <div id="biasa" class="biasa">
+        <h1>Login Biasa</h1>
+        <h2>ini adalah tampilan user biasa</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolores consectetur neque magni iure quidem sapiente maxime ex temporibus. Consectetur perferendis assumenda quo quidem adipisci, rem esse ullam modi recusandae!</p>
+    </div>
+
+    <script type="application/javascript">
+        const usernameInput = document.getElementById("username")
+        const passwordInput = document.getElementById("password")
+        const admin = document.querySelector("#admin")
+        const biasa = document.querySelector("#biasa")
+        const logout = document.getElementById("btnl")
+
+        admin.style.display = "none";
+        biasa.style.display = "none";
+        logout.style.display = "none";
+        
+        
+        function onLogin(){
+            console.log(`username = ${usernameInput.value}`)
+            console.log(`password = ${passwordInput.value}`)
+            localStorage.setItem("username", usernameInput.value)   //(key, value)
+            
+            logout.style.display = "block";
+            
+            
+            if(usernameInput.value == "admin" && passwordInput.value == "1234"){
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                document.getElementById("btn").style.display = "none"
+                
+                localStorage.setItem("role", "admin")
+                admin.style.display = "block";
+            } else{
+                usernameInput.style.display = "none"
+                passwordInput.style.display = "none"
+                document.getElementById("btn").style.display = "none"
+                
+                localStorage.setItem("role", "user biasa")
+                biasa.style.display = "block";
+            }
+        }
+        
+        if(localStorage.getItem("username")){   //jika di lokal storage sudah ada item username
+            usernameInput.style.display = "none"
+            passwordInput.style.display = "none"
+            document.getElementById("btn").style.display = "none"
+            logout.style.display = "block";
+
+            if(localStorage.getItem("role") == "admin"){
+                admin.style.display = "block";
+            } else{
+                biasa.style.display = "block";
+            }
+            
+        }
+        function onLogout(){
+            localStorage.clear()
+            location.reload()
+
+            
+
+        }
+    
+    </script>
+    
+</body>
+</html>

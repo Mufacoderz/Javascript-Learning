@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Employee {
+
+    constructor(firstName){
+        this.firstName = firstName;
+    }
+    sayHello(firstName){
+        console.log(`Hi ${firstName}, my name is employee ${this.firstName}`);
+    }
+
+}
+class Manager extends Employee{
+    
+    constructor(firstName, lastName){
+        super(firstName);   //jika membuat constructor di childnya wajib menggunakan super, walaupun diparentnya tidak ada consturctor   //tidak perlu this.firstname lgi karena sudah dideklarasikan di constructor parentnya, yaitu employee
+        this.lastName = lastName;
+    }
+    sayHello(firstName){
+        console.log(`Hi ${firstName}, my name is employee ${this.firstName} ${this.lastName}`);
+    }
+
+}
+        const budi = new Employee("budi");
+        budi.sayHello("joko")
+
+        const eko = new Manager("eko", "gunawan");
+        eko.sayHello("joko")
+
+        console.log(budi);
+        console.log(eko);
+
+
+    </script>
+</body>
+</html>
