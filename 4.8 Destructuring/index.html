@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //mengambil nilai dari array atau objk menjadi variabel baru
+        const num = [1,2,3,4,5]
+        const [first, second, third, fourth, fifth] = num
+        console.log(second)
+
+        const person = {
+            name: 'ucup',
+            age: 111,
+            city: 'united'
+        }
+        const {name, age, city:kota} = person   //deklarase variabelnya harus sesuai keyname di objeknya, kalau mau dirubah maka tinggal keyname:namaVariabelBaru, contohnya city:kota
+        console.log(name)
+        console.log(kota)
+
+
+    </script>
+    
+</body>
+</html>
