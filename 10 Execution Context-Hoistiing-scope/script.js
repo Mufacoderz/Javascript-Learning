@@ -19,5 +19,17 @@ var nama = "mf"
 // tapi kalau function... funcction membuat local execution context...yg didalamnya terdapat creation dan execution phase juga
 
 
+//contoh
+var name = 'muhammad fadil'
+var username = '@mfadil'
+
+function cetakURL(username){
+    var instaURL = 'http://instagram.com/'
+    return instaURL + username
+}
+console.log(cetakURL(username))
+
+//untuk mempermudah membacanya buka visualizer js
+
 
 
