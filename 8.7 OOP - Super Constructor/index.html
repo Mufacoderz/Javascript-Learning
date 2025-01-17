@@ -6,39 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-
-class Employee {
-
-    constructor(firstName){
-        this.firstName = firstName;
-    }
-    sayHello(firstName){
-        console.log(`Hi ${firstName}, my name is employee ${this.firstName}`);
-    }
-
-}
-class Manager extends Employee{
-    
-    constructor(firstName, lastName){
-        super(firstName);   //jika membuat constructor di childnya wajib menggunakan super, walaupun diparentnya tidak ada consturctor   //tidak perlu this.firstname lgi karena sudah dideklarasikan di constructor parentnya, yaitu employee
-        this.lastName = lastName;
-    }
-    sayHello(firstName){
-        console.log(`Hi ${firstName}, my name is employee ${this.firstName} ${this.lastName}`);
-    }
-
-}
-        const budi = new Employee("budi");
-        budi.sayHello("joko")
-
-        const eko = new Manager("eko", "gunawan");
-        eko.sayHello("joko")
-
-        console.log(budi);
-        console.log(eko);
-
-
-    </script>
+   <script src="scr.js"></script>
 </body>
 </html>
