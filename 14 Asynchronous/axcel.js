@@ -11,6 +11,7 @@ console.log("Selesai"); // Baris ini akan dieksekusi sebelum setTimeout selesai
 
 // 2. Menggunakan Promise untuk menghandle asynchronous operation
 const fetchData = () => {
+  // Promise digunakan untuk mengelola operasi asynchronous dengan dua kemungkinan hasil: resolve (berhasil) atau reject (gagal).
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const success = true; // Simulasi kondisi berhasil atau gagal
