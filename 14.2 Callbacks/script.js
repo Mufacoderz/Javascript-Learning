@@ -17,6 +17,23 @@ function tampilkanPesan(callback) {
 
 tampilkanPesan(nama => alert(`Halo, ${nama}!`));
 
+
+//contoh lain
+function greet(name, callback) {
+    console.log("Halo, " + name);
+    callback();
+}
+
+function done() {
+    console.log("Selesai!");
+}
+
+greet("Fadil", done);
+// Output:
+// Halo, Fadil
+// Selesai!
+
+
 //Asynchronous callback
 // Data mahasiswa
 const mhs = [
@@ -78,3 +95,21 @@ Penjelasan:
 2. `processMahasiswa` menggunakan `for...of` untuk mengiterasi setiap mahasiswa dan menunggu (`await`) eksekusi `showName` selesai sebelum melanjutkan ke mahasiswa berikutnya.
 3. `await` digunakan agar proses berjalan satu per satu dengan jeda 1 detik, meniru perilaku asynchronous seperti pengambilan data dari API.
 */
+
+
+//contoh lain
+function greet(name, callback) {
+    setTimeout(() => {
+        console.log("Halo, " + name);
+        callback();
+    }, 2000); // Simulasi delay 2 detik
+}
+
+function done() {
+    console.log("Selesai!");
+}
+
+greet("Fadil", done);
+// Output setelah 2 detik:
+// Halo, Fadil
+// Selesai!
