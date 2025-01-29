@@ -1,6 +1,10 @@
 // Callback adalah fungsi yang dikirimkan sebagai argumen ke fungsi lain,
 // kemudian dipanggil di dalam fungsi tersebut untuk menjalankan aksi tertentu.
 
+//Synchronous callback dieksekusi secara langsung dan berurutan, sehingga kode berikutnya harus menunggu callback selesai sebelum dapat berjalan. Ini sering digunakan dalam operasi yang tidak membutuhkan waktu lama, seperti manipulasi array atau perhitungan sederhana.
+
+//Asynchronous callback, sebaliknya, tidak dieksekusi langsung dan dapat berjalan setelah suatu proses selesai, memungkinkan kode lain tetap berjalan sementara menunggu callback dipanggil. Ini umumnya digunakan dalam operasi yang memerlukan waktu, seperti membaca file, melakukan permintaan HTTP ke server, atau menunggu respons dari database.
+
 
 //synchronous callback
 
