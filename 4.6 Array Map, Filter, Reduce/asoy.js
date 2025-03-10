@@ -1,4 +1,4 @@
-// // map() melakukan transformasi setiap elemen array dan menyimpannya ke array baru
+//         // map() melakukan transformasi setiap elemen array dan menyimpannya ke array baru
 //         // filter() melakukan array filter degn kondisi tertentu
 //         // reduce() menghasilkan satu akumulasi nilai dengan iterasi setiap elemen array
 
